@@ -100,6 +100,19 @@ After implementation, verify:
 - responsive behavior exists
 - the page still feels like the chosen director in grayscale wireframe form
 
+## Production Craft
+
+The difference between "looks like a template" and "looks professionally art-directed" is craft the Phase 3 checklist does not catch. Before final QA, confirm each — these are additive to, not a repeat of, the checklist above:
+
+- **Type craft:** a deliberate type scale (not browser defaults), tightened tracking on large display text, controlled line length (~60–75ch for body), no orphan/widow headlines, consistent vertical rhythm.
+- **Spacing precision:** spacing comes from the scale, not stray pixel values; optical alignment where mathematical alignment looks off; consistent section padding logic across the page.
+- **Interactive states are complete:** every interactive element has hover, focus-visible, active, and disabled states; forms have error and empty states; async surfaces have a loading state. No dead hovers.
+- **Accessibility as craft:** visible keyboard focus, logical tab order, AA contrast on every text/UI pair, `prefers-reduced-motion` honored, real alt text, semantic landmarks.
+- **Responsive integrity:** the composition is re-thought at small widths, not just reflowed; no horizontal scroll; tap targets ≥ 44px; the signature composition still reads on mobile.
+- **Performance feel:** fonts use `font-display: swap`; the largest hero asset is sized and lazy-loaded where appropriate; motion stays on `transform`/`opacity`; no layout-shift jank on load.
+
+If any item is weak, fix it before declaring the build done — a single broken focus state or default-looking type scale reads as amateur regardless of how strong the concept is.
+
 ## Post-Screening Adjustments
 
 ### Punch Up

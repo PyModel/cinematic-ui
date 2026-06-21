@@ -52,10 +52,15 @@ These files must stay aligned in intent with `CLAUDE.md` when workflow rules cha
 - Treat this repo as a skill package, not as a normal app repo.
 - If editing skill logic, keep `SKILL.md` concise and push details into `references/`.
 - If changing workflow rules, sync the templates and guardrails in:
+  - `references/autonomous-direction.md`
   - `references/output-templates.md`
   - `references/premium-calibration.md`
   - `references/anti-garbage.md`
 - Preserve `Demo Uniqueness Protocol`.
+- Run autonomously: infer, choose, and justify rather than asking for every detail. `Surprise me` is the default start option; proceed on justified assumptions when input is thin. Logic in `references/autonomous-direction.md`.
+- Universal and brand-agnostic: never assume or default to a specific brand. Honor the user's own brand if given; otherwise generate fresh. Keep brand names out of the skill core (`SKILL.md`, `references/`).
+- Make every invocation a visibly different style: seed director+film selection from the project across the full library and rotate the palette lead — see `references/anti-convergence.md` (Cross-Invocation Variation).
+- Work in the saturated, primary-leaning color space but rotate the lead per project (red-led / green-led / cobalt-led / tension pair) — never a fixed blue+red+green trio, and never default to brown/sepia/amber unless the film demands it (a bias, not an override). Land one tasteful surprise per project and self-critique before presenting.
 - Every invocation must complete the start questionnaire before Phase 1.
 - When web access is available, research the chosen director and film before locking Phase 1.
 - Treat the film as cinema research, not as a spec sheet. Formalize only the web translation artifacts.

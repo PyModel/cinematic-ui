@@ -1,6 +1,6 @@
 {
   "name": "@pythoughts/cinematic-ui",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A reasoning-first web design skill that makes AI agents think like a film director — research a real director and film, extract cinematic grammar, translate it into page narrative, composition, and motion. Not a style picker. A director's workflow.",
   "license": "MIT",
   "author": {

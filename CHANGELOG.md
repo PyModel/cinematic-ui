@@ -6,8 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-06-21
+
+### Added
+
+- **Autonomous Direction** (`references/autonomous-direction.md`): a decide-don't-ask creative-director posture folded into the existing 4 phases — 3-direction generation and selection (Phase 1), palette exploration (Phase 3), and self-critique plus grouped refinement passes (Phase 4).
+- **`Surprise me` is now the default** start option; the questionnaire is a non-blocking fast-path that proceeds on justified assumptions when input is thin.
+- **Cross-Invocation Variation** (`references/anti-convergence.md`): project-seeded director+film selection across the full library, justify-or-reroll for over-referenced directors, an independently rotating palette lead, and a convergence audit recorded in `decisions.md` so every invocation produces a visibly different style.
+- **Production Craft check** (`references/implementation-guardrails.md`): type craft, spacing precision, complete interactive states, accessibility, responsive integrity, and performance feel — the gaps the Phase 3 checklist did not cover.
+
 ### Changed
 
+- **Universal and brand-agnostic core**: removed all brand-specific palette and identity from the skill core; `references/data/brand-palettes.md` is now a neutral bring-your-own-brand template. Publishing identity (npm `@pythoughts`, GitHub `Pythoughts-labs`) is unchanged.
+- **Color direction** works in a saturated, primary-leaning space with a lead that rotates per project (red / green / cobalt / tension pair) instead of defaulting to warm/sepia/amber tones, and never as a fixed blue+red+green trio. A deliberately chosen warm film still keeps its true palette.
 - Repointed: GitHub repo and homepage are now `github.com/Pythoughts-labs/cinematic-ui`; npm package is `@pythoughts/cinematic-ui`.
 - Author and maintainer is Mohamed Elkholy.
 - Added `package.json` for npm publishing (scoped `@pythoughts/cinematic-ui`, MIT, `files` whitelist, no runtime deps).

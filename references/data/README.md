@@ -16,7 +16,7 @@ All data libraries for the cinematic-layout skill. These files are loaded ON DEM
 | `interaction-effects-50.md` | ~40KB | 50+ | Step 4 — pick hover/scroll/click effects per scene |
 | `textures.md` | ~10KB | 30+ | Step 4 — pick background textures per scene |
 | `color-grades.md` | ~8KB | 40+ | Step 3 — apply film color grading |
-| `brand-palettes.md` | ~5KB | 2 themes | Step 3 — Pythoughts brand palette (dark + light) |
+| `brand-palettes.md` | ~5KB | 2 themes | Step 3 — bring-your-own-brand integration (opt-in; one worked example) |
 | `font-moods.md` | ~6KB | 30+ | Step 3 — pick font pairing by mood |
 | `compositions.md` | ~8KB | 30+ | Step 4 — pick section layout composition |
 

@@ -32,6 +32,22 @@ When a library offers multiple director-compatible options, do not always pick t
 - Use a stable site-name hash as the starting position.
 - Walk the pool from that position, skipping entries that violate page-role or uniqueness constraints.
 
+## Cross-Invocation Variation
+
+The goal: every separate use of this skill should produce a visibly different style, even when there is no shared workspace history. Style is derived from the director + film, so a wide, non-repeating director+film draw is the load-bearing lever — palette, type, composition, and motion all follow from it. Do not rely on soft "be more varied" intentions; rotate the seed-driven selection below.
+
+**Project seed.** Build a stable seed from `project/site name + niche` (lowercase, trimmed). This is the cross-invocation entropy: different project name or niche → different seed → different start index → different director → different downstream style. With no project name yet, seed on the niche plus the user's one-line brief.
+
+**Director draw — span the full library, not the famous few.**
+
+- The 200-director library is bucketed by genre, era, and region. From the niche, build a pool of *director-fit* candidates, then start at `seed mod pool length` and walk forward, skipping entries that violate page-role or uniqueness constraints.
+- Do not keep landing on the same over-referenced names — Nolan, Villeneuve, Fincher, Wong Kar-wai, Kubrick, Wes Anderson, Ridley Scott, Tarantino and similar marquee directors. If the seed lands on one of these, you may keep it, but write a one-line justification in `decisions.md` for why this specific film solves this niche's visual problem better than a less obvious director in the pool. No justification → re-roll to the next pool entry.
+- Across a user's repeated projects, the new director must come from a different genre/era/region bucket than their most recent comparable output unless they asked for a sequel.
+
+**Palette lead — its own rotation axis.** Palette is semi-independent of the film (a film constrains mood, not the exact accent), so rotate it separately or palette becomes a hidden convergence vector. Derive a palette-lead index from `seed + a fixed offset` and rotate the lead across projects: red-led, green-led, cobalt/blue-led, viridian/teal-led, or a deliberate two-color tension pair. Stay in the saturated, primary-leaning space (not warm earth tones unless the chosen film demands it), keep AA contrast, and never repeat the previous project's lead. See the Color Direction rule in `SKILL.md`.
+
+**Convergence audit (record in `decisions.md`).** Name, for this project versus the most recent comparable one: director bucket, palette lead, primary composition family, and motion language. If two or more match, re-roll the weakest axis before Phase 2.
+
 ## Minimum Rules
 
 - Hero archetype: choose from Tier 1 and Tier 2 director-fit pools, then select via site-name hash.

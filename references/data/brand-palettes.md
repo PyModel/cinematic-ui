@@ -1,136 +1,106 @@
-# Brand Palettes — Pythoughts
+# Brand Palette Integration (Bring Your Own Brand)
 
-Curated, pre-validated color palettes for sites under the Pythoughts brand
-(`@pythoughts/*` on npm). Two themes share the same eleven colors so a single
-source of truth covers both light and dark contexts.
+Use this **only when the user supplies their own brand** and wants the site to honor it. This is not a default look — the skill is brand-agnostic, and with no brand given you generate a fresh palette via the Color Direction and Cross-Invocation Variation rules instead.
 
-## Palette Source
+How to use any brand here:
 
-| Hex | Name | Role |
+1. Take the user's brand colors (or extract them from their logo / existing site).
+2. Map them onto the token roles below — background, surface, text, muted text, primary/secondary/tertiary accent, border.
+3. Validate contrast (target WCAG AA: 4.5:1 for body text, 3:1 for large text and UI) and fill gaps with neutral steps.
+4. Translate that palette *through the chosen film*, the same as any film-derived grade — do not let the brand flatten the cinematic direction.
+
+The values below are a **neutral, illustrative example** showing the shape of a dark + light token system. They are placeholders — swap in the user's actual brand colors and re-validate contrast. Do not ship these example values as a default.
+
+## Token Roles
+
+| Role | Token | Used for |
 |---|---|---|
-| `#000000` | Black | ink, contrast base |
-| `#303841` | Dark Slate | dark surface elevation |
-| `#DDDDDD` | Light Gray | muted body text |
-| `#EEEEEE` | Near White | high-contrast text on dark |
-| `#F5F5F5` | Off White | primary body text |
-| `#EFECE3` | Parchment | warm light surface |
-| `#CB2957` | Crimson | primary accent (action, brand) |
-| `#FF5722` | Ember Orange | secondary accent (highlight, CTA) |
-| `#76ABAE` | Teal | tertiary accent (calm, link, info) |
-| `#8FABD4` | Sky | light accent (secondary fill on light) |
-| `#4A70A9` | Cobalt | deep light accent (link, focus on light) |
+| Background | `--brand-bg` | page background |
+| Surface | `--brand-surface` | cards, frames, elevated panels |
+| Surface (nested) | `--brand-surface-2` | nested surfaces, frame faces |
+| Primary text | `--brand-text` | headings and body |
+| Muted text | `--brand-text-muted` | secondary text |
+| Dim text | `--brand-text-dim` | captions, metadata |
+| Primary accent | `--brand-accent` | primary CTA, brand mark |
+| Secondary accent | `--brand-accent-2` | highlight, secondary CTA (optional) |
+| Tertiary accent | `--brand-accent-3` | link, info, calm emphasis (optional) |
+| Rule | `--brand-rule` | hairlines, dividers |
 
-## Theme — Pythoughts Dark
-
-Default for cinematic dark contexts (banner, dashboard, hero on black).
+## Example — Dark Theme (illustrative)
 
 | Token | Hex | Used for |
 |---|---|---|
-| `--brand-bg` | `#000000` | page background |
-| `--brand-surface` | `#303841` | cards, frames, elevated panels |
-| `--brand-surface-2` | `#1f2630` *(derived)* | nested surfaces, frame faces |
-| `--brand-text` | `#F5F5F5` | primary text |
-| `--brand-text-muted` | `#DDDDDD` | secondary text |
-| `--brand-text-dim` | `#76ABAE` | captions, metadata |
-| `--brand-accent` | `#CB2957` | primary CTA, brand mark |
-| `--brand-accent-2` | `#FF5722` | secondary CTA, highlight |
-| `--brand-accent-3` | `#76ABAE` | link, info, calm emphasis |
-| `--brand-rule` | `#303841` | hairlines, dividers |
+| `--brand-bg` | `#0B0E12` | page background |
+| `--brand-surface` | `#161B22` | cards, frames, elevated panels |
+| `--brand-surface-2` | `#1F2630` | nested surfaces, frame faces |
+| `--brand-text` | `#F2F5F8` | primary text |
+| `--brand-text-muted` | `#C2C9D2` | secondary text |
+| `--brand-text-dim` | `#8B97A6` | captions, metadata |
+| `--brand-accent` | `#3B82F6` | primary CTA, brand mark |
+| `--brand-accent-2` | `#22C55E` | highlight (only if a tension pair is wanted) |
+| `--brand-accent-3` | `#8B97A6` | link, calm emphasis |
+| `--brand-rule` | `#2A313B` | hairlines, dividers |
 
-**Contrast checks** (against `--brand-bg` `#000000`):
-
-| Pair | Ratio | Notes |
-|---|---|---|
-| `#F5F5F5` on `#000000` | 18.8 : 1 | AAA |
-| `#DDDDDD` on `#000000` | 14.2 : 1 | AAA |
-| `#76ABAE` on `#000000` | 8.1 : 1 | AAA |
-| `#CB2957` on `#000000` | 4.9 : 1 | AA large + UI |
-| `#FF5722` on `#000000` | 5.8 : 1 | AA |
-
-## Theme — Pythoughts Light
-
-Default for editorial, document, and warm contexts.
+## Example — Light Theme (illustrative)
 
 | Token | Hex | Used for |
 |---|---|---|
-| `--brand-bg` | `#EFECE3` | page background |
-| `--brand-surface` | `#F5F5F5` | cards, frames |
-| `--brand-text` | `#000000` | primary text |
-| `--brand-text-muted` | `#303841` | secondary text |
-| `--brand-text-dim` | `#4A70A9` | captions, metadata |
-| `--brand-accent` | `#CB2957` | primary CTA, brand mark |
-| `--brand-accent-2` | `#FF5722` | secondary CTA, highlight |
-| `--brand-accent-3` | `#4A70A9` | link, info |
-| `--brand-rule` | `#DDDDDD` | hairlines, dividers |
+| `--brand-bg` | `#FAFBFC` | page background |
+| `--brand-surface` | `#FFFFFF` | cards, frames |
+| `--brand-text` | `#0B0E12` | primary text |
+| `--brand-text-muted` | `#3A424D` | secondary text |
+| `--brand-text-dim` | `#5B6573` | captions, metadata |
+| `--brand-accent` | `#2563EB` | primary CTA, brand mark |
+| `--brand-accent-2` | `#16A34A` | highlight (optional) |
+| `--brand-accent-3` | `#2563EB` | link, info |
+| `--brand-rule` | `#E3E7EC` | hairlines, dividers |
 
-**Contrast checks** (against `--brand-bg` `#EFECE3`):
+> Near-white text on the near-black background reads AAA. Every **accent** above is illustrative — when you swap in the user's brand, verify each accent against its background reaches AA before shipping, and darken or lighten it if it falls short.
 
-| Pair | Ratio | Notes |
-|---|---|---|
-| `#000000` on `#EFECE3` | 17.4 : 1 | AAA |
-| `#303841` on `#EFECE3` | 11.5 : 1 | AAA |
-| `#4A70A9` on `#EFECE3` | 4.8 : 1 | AA large + UI |
-| `#CB2957` on `#EFECE3` | 4.7 : 1 | AA large + UI |
-| `#FF5722` on `#EFECE3` | 3.1 : 1 | AA large only — use with `--brand-bg` darken for body text |
+## Accent Discipline
 
-## Tri-Accent Pattern (recommended)
-
-Use all three accents together to echo the Pythoughts brand:
-
-```
---brand-accent  → #CB2957 (primary)
---brand-accent-2 → #FF5722 (highlight)
---brand-accent-3 → #76ABAE (calm / link)
-```
-
-**Do:**
-- One accent per region (header, section, footer).
-- Reserve `#CB2957` for primary CTA and brand mark.
-- Use `#FF5722` for ≤ 1 per screen (it's loud).
-- Use `#76ABAE` for links and info chips on dark.
+- One main accent is usually enough. Add a secondary accent only when it creates meaningful tension.
+- One accent per region (header, section, footer); reserve the primary accent for the main CTA and brand mark.
+- Use a loud secondary accent at most once per screen.
 
 **Avoid:**
-- Stacking all three accents in a single small component (visual noise).
-- Using `#FF5722` for body text in light theme — fails AA at body size.
-- Tinting `#000000` or `#F5F5F5` — use the next neutral in the table instead.
+- Stacking all accents in a single small component (visual noise).
+- Using a low-contrast accent for body text — verify AA at body size first.
+- Tinting the pure background or text tokens — use the next neutral step instead.
 
-## CSS Variables (drop-in)
+## CSS Variables (drop-in, replace with the user's brand)
 
 ```css
 :root[data-theme="dark"] {
-  --brand-bg: #000000;
-  --brand-surface: #303841;
-  --brand-text: #F5F5F5;
-  --brand-text-muted: #DDDDDD;
-  --brand-text-dim: #76ABAE;
-  --brand-accent: #CB2957;
-  --brand-accent-2: #FF5722;
-  --brand-accent-3: #76ABAE;
-  --brand-rule: #303841;
+  --brand-bg: #0B0E12;
+  --brand-surface: #161B22;
+  --brand-surface-2: #1F2630;
+  --brand-text: #F2F5F8;
+  --brand-text-muted: #C2C9D2;
+  --brand-text-dim: #8B97A6;
+  --brand-accent: #3B82F6;
+  --brand-accent-2: #22C55E;
+  --brand-accent-3: #8B97A6;
+  --brand-rule: #2A313B;
 }
 
 :root[data-theme="light"] {
-  --brand-bg: #EFECE3;
-  --brand-surface: #F5F5F5;
-  --brand-text: #000000;
-  --brand-text-muted: #303841;
-  --brand-text-dim: #4A70A9;
-  --brand-accent: #CB2957;
-  --brand-accent-2: #FF5722;
-  --brand-accent-3: #4A70A9;
-  --brand-rule: #DDDDDD;
+  --brand-bg: #FAFBFC;
+  --brand-surface: #FFFFFF;
+  --brand-text: #0B0E12;
+  --brand-text-muted: #3A424D;
+  --brand-text-dim: #5B6573;
+  --brand-accent: #2563EB;
+  --brand-accent-2: #16A34A;
+  --brand-accent-3: #2563EB;
+  --brand-rule: #E3E7EC;
 }
 ```
 
 ## When to use
 
-Pick this palette when:
-- The user is shipping a `@pythoughts/*` npm package, Pythoughts-labs repo,
-  or other Pythoughts-flavored property.
-- The user asks for "the brand colors" or "our palette" and is on Pythoughts.
-- The site needs to feel confident, modern, and approachable (vs. cinematic
-  restraint) — this palette is friendlier than the film-derived grades in
-  `color-grades.md`.
+Use this integration path when:
+- The user brings their own brand and asks the site to honor "our colors" / "the brand palette" — map their tokens onto the roles above.
+- The site needs to feel confident and on-brand rather than purely film-graded.
 
-Pick `color-grades.md` instead when the user wants a film-derived cinematic
-grade (specific director look). Don't mix — pick one source of truth.
+Use `color-grades.md` instead when there is no brand to honor and you want a film-derived cinematic grade. Don't mix — pick one source of truth. With no brand and no specific grade chosen, generate a fresh palette per the Color Direction and Cross-Invocation Variation rules; never fall back to this example as a default.

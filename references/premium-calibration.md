@@ -23,6 +23,10 @@ First write the site-wide cinematic grammar. Then write these page decisions int
   - Why the hero feels commanding or expensive in one sentence.
 - `Restraint statement`
   - What you will deliberately not do.
+- `Color direction`
+  - The palette family and its lead, and why. Lead with one primary-leaning direction (red / green / cobalt / tension pair), rotated from the project seed — not a fixed blue+red+green trio. Vary the lead from prior demos; do not default to warm/sepia/amber unless the chosen film genuinely calls for it. See [autonomous-direction.md](autonomous-direction.md).
+- `Surprise signal`
+  - The one controlled, tasteful art-direction move the user would not have requested but will appreciate — kept usable and coherent with the film.
 - `Material thesis`
   - What makes surfaces feel tactile or atmospheric.
 - `Typography thesis`

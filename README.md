@@ -149,6 +149,7 @@ the current phase needs.
 | File | Purpose |
 |------|---------|
 | [`references/library-index.md`](./references/library-index.md) | Which files to read at each phase |
+| [`references/autonomous-direction.md`](./references/autonomous-direction.md) | Autonomous posture, color direction, surprise + self-critique |
 | [`references/premium-calibration.md`](./references/premium-calibration.md) | Post-brief self-check |
 | [`references/anti-garbage.md`](./references/anti-garbage.md) | Common AI design degradation patterns |
 | [`references/anti-convergence.md`](./references/anti-convergence.md) | Hash-based selection to prevent repeated shells |

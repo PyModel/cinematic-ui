@@ -43,6 +43,10 @@ This skill is primarily designed for **Claude Code**. The Claude Code-specific c
 - Use [SKILL.md](./SKILL.md) as the source of truth for the skill workflow.
 - Keep `Demo Uniqueness Protocol` intact.
 - Avoid turning this into a generic luxury landing page generator.
+- Operate autonomously: infer, choose, and justify rather than asking for every detail. `Surprise me` is the default start option; proceed on justified assumptions when input is thin. See [references/autonomous-direction.md](./references/autonomous-direction.md).
+- Universal and brand-agnostic: never assume or default to a specific brand. Honor the user's own brand if given; otherwise generate fresh. No skill-core file names a specific brand.
+- Make every invocation a visibly different style: seed director+film selection from the project across the full library and rotate the palette lead — see [references/anti-convergence.md](./references/anti-convergence.md) (Cross-Invocation Variation).
+- Work in the saturated, primary-leaning color space but rotate the lead per project (red-led / green-led / cobalt-led / tension pair) — never a fixed blue+red+green trio, and never default to brown/sepia/amber unless the film demands it. Land one tasteful surprise per project and self-critique before presenting.
 - Every invocation must finish the start questionnaire before entering Phase 1.
 - Treat the film as research input, not as a spec artifact. The formal workflow starts when film observations are translated into web artifacts.
 

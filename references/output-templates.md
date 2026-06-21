@@ -16,6 +16,15 @@ Use these files as working artifacts inside the target project directory.
 - Major page roles:
 - Image placeholders:
 - Sub-agent delegation plan (optional):
+- Autonomous assumptions made (items inferred rather than asked):
+
+## Creative Directions
+
+- Direction A (name / concept / why non-generic / risk):
+- Direction B (name / concept / why non-generic / risk):
+- Direction C (name / concept / why non-generic / risk):
+- Chosen direction:
+- Why it has the strongest identity-to-usability ratio:
 
 ## Demo Uniqueness Audit
 
@@ -46,6 +55,12 @@ Use these files as working artifacts inside the target project directory.
 - Accent:
 - Shadow:
 - Text:
+
+### Color Direction
+- Palette family + lead (one primary-leaning direction — red-led / green-led / cobalt-led / tension pair, rotated from the project seed; avoid brown/sepia/amber and avoid a fixed blue+red+green trio):
+- How this family and lead differ from the user's most recent demo:
+- If a warm/earthy palette was chosen anyway, the film reason:
+- Contrast check (AA for text and UI):
 
 ### Director Signatures
 1.
@@ -89,6 +104,8 @@ Use these files as working artifacts inside the target project directory.
 - Signature technique 3:
 - Motion rules:
 - Typography rules:
+- Color direction (primary-anchored palette family; warm only if the film demands it):
+- Surprise signal (the one tasteful move the user would not have asked for):
 
 ## Site Cinematic Grammar
 - Page-shell logic:
@@ -197,6 +214,12 @@ Use these files as working artifacts inside the target project directory.
 ### Decision
 - 
 
+## Palette Candidates
+- Restrained candidate (bg / surface / text / muted / accent / accent-hover / border / optional secondary):
+- Unusual candidate:
+- Tension-based candidate:
+- Selected palette and why (rarity, readability, primary anchor, holds across the page):
+
 ## Shared System
 - Navigation:
 - Footer:
@@ -205,6 +228,20 @@ Use these files as working artifacts inside the target project directory.
 - Utility primitives:
 - Repeated motifs allowed only after page compositions are locked:
 - Uniqueness check against previous demos:
+
+## Self-Critique (Phase 4)
+
+Score each strong / mixed / weak, then list the 5 highest-impact upgrades and the grouped passes applied.
+
+- Originality and point of view:
+- Typography and palette quality:
+- Hierarchy and section rhythm:
+- Motion restraint:
+- Mobile intention:
+- Accessibility and contrast:
+- Non-generic identity (does it look AI-generated?):
+- Top 5 upgrades:
+- Refinement passes applied:
 
 ## Phase 3 Quality Check
 - [ ] Every section has complete layout CSS
@@ -218,10 +255,12 @@ Use these files as working artifacts inside the target project directory.
 
 ## Derived Global Tokens
 ```css
+/* Replace --accent with the selected palette's accent. Default anchors on a
+   saturated primary (blue/red/green), not a warm tan — see Color Direction. */
 :root {
   --bg: #000000;
   --text: #f3f3f3;
-  --accent: #d4a35f;
+  --accent: #2f6df6; /* primary-anchored placeholder (cobalt); set per chosen palette */
   --radius-card: 8px;
   --transition-fast: 0.35s;
   --transition-slow: 1s;

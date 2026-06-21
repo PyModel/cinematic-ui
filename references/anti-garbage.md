@@ -83,6 +83,8 @@ If the reference site's aesthetic is fundamentally incompatible with the chosen 
 - Prefer a full token set instead of one accent color pasted onto a generic UI.
 - Avoid pure black and pure white unless the chosen film genuinely calls for them.
 - Carry color decisions through surfaces, borders, shadows, and atmospheric layers.
+- Work in the saturated, primary-leaning space (blue, red, green and relatives: cobalt, scarlet, oxblood, emerald, viridian, chartreuse), but lead each project with one direction and rotate that lead project to project — red-led, green-led, cobalt-led, or a tension pair. Never paint blue+red+green together every time; that is just a new convergence vector. Do not default to brown, sepia, amber, tan, or parchment warmth either. A deliberately chosen warm film keeps its true palette — this is a bias, not an override. Full logic in [autonomous-direction.md](autonomous-direction.md).
+- Vary the palette family across projects so the work never converges on one look — warm *or* primary. Derive the lead from the project seed (see Cross-Invocation Variation in [anti-convergence.md](anti-convergence.md)). "Varied" never means random neon or chaos — every palette holds readable contrast and feels intentional.
 
 ## Final Review
 

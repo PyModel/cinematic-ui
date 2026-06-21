@@ -36,21 +36,22 @@ Do not confuse the film with the workflow artifact. The film is research input a
 
 ## Start
 
-- Every invocation must complete the start questionnaire before Phase 1 begins.
-- Do not enter `decisions.md`, director selection, film selection, architecture, or visual planning until the questionnaire is complete.
+- Every invocation must complete the start questionnaire before Phase 1 begins, but treat it as a fast-path, not a stall. Present the whole short questionnaire at once with defaults already filled, so the user can confirm in one reply instead of composing answers from scratch.
+- Do not enter `decisions.md`, director selection, film selection, architecture, or visual planning until the questionnaire is resolved (answered or defaulted).
 - Mirror the user's language in every question and deliverable.
-- Keep questions short and ask only one blocking question at a time.
 - Run this start questionnaire on every invocation:
-  1. Ask how to start:
-  - `Screenshot`: reverse-engineer a visual reference from an image or URL.
+  1. Ask how to start. **`Surprise me` is the default** — lead with it and pre-select it:
+  - `Surprise me` *(default)*: take full creative direction. Autonomously pick a fresh genre + director + film combination that differs from any previous work when project history is available, then proceed.
   - `Step-by-step`: let the user choose genre, director, and film.
-  - `Surprise me`: pick a fresh combination that differs from previous work when project history is available.
-  2. Ask whether the design should include image placeholders.
-  3. Ask for the site's niche and page list before moving into architecture.
-- If the environment supports structured questionnaires or forms, use them.
-- If the environment does not support structured questionnaires, ask the same items in plain language.
+  - `Screenshot`: reverse-engineer a visual reference from an image or URL.
+  2. Ask whether the design should include image placeholders *(default: yes)*.
+  3. Ask for the site's niche and page list *(default: infer both from the user's request, then state the inference for confirmation)*.
+- If the environment supports structured questionnaires or forms, use them and pre-select the defaults above.
+- If the environment does not support structured questionnaires, ask the same items in plain language with the defaults shown inline.
+- Operate autonomously when input is thin: if the user gives a go-ahead, declines to choose, or leaves items blank, do not block. Proceed with `Surprise me` plus justified assumptions for the remaining items, state those assumptions in `decisions.md`, and keep building. Ask a clarifying question only when a missing answer would genuinely change the design — never just to appear careful.
 - If the user pre-answers some items in the initial request, confirm or record those answers and only ask for the missing items.
-- Phase 1 starts only after all required start-questionnaire items are answered or explicitly inferred from the user's request.
+- Read [references/autonomous-direction.md](references/autonomous-direction.md) to run this autonomous, decide-don't-ask posture across all four phases.
+- Phase 1 starts only after all required start-questionnaire items are answered, defaulted, or inferred from the user's request.
 
 ## Demo Uniqueness Protocol
 
@@ -115,6 +116,7 @@ Keep `SKILL.md` lean. Load only the references needed for the current phase.
 
 - [references/library-index.md](references/library-index.md)
 - [references/premium-calibration.md](references/premium-calibration.md)
+- [references/autonomous-direction.md](references/autonomous-direction.md)
 
 ### Phase 1: Decisions
 
@@ -134,6 +136,7 @@ Keep `SKILL.md` lean. Load only the references needed for the current phase.
 - If web access is unavailable, say so explicitly and continue with best-effort inference from local libraries. Mark the result as a weaker research pass.
 - If the user provides references, do not copy them whole. Read [references/reference-protocol.md](references/reference-protocol.md) and decompose each reference into traits such as rhythm, materiality, typography, framing, or image treatment.
 - Record the uniqueness audit, shell-ban list, and primary composition family in `decisions.md`.
+- Generate creative directions before committing. Per [references/autonomous-direction.md](references/autonomous-direction.md), draft 3 candidate director+film directions (at least 2 genuinely unconventional), then autonomously select the one with the strongest identity-to-usability ratio unless the user asked to choose. Record the chosen direction and a one-line rationale.
 - Write `decisions.md`.
 
 ### Phase 2: Storyboard
@@ -182,10 +185,11 @@ Keep `SKILL.md` lean. Load only the references needed for the current phase.
   - `references/data/background-techniques.md`
   - `references/data/typography-cinema.md`
   - `references/data/color-grades.md`
-  - `references/data/brand-palettes.md` *(only if shipping a Pythoughts-flavored property; pick one source of truth — never mix with `color-grades.md`)*
+  - `references/data/brand-palettes.md` *(only when the user brings their own brand tokens to honor; one worked example included — pick one source of truth, never mix with `color-grades.md`)*
   - `references/data/font-moods.md`
   - `references/data/textures.md`
 - Read [references/anti-garbage.md](references/anti-garbage.md) before finalizing the spec.
+- Run the palette exploration from [references/autonomous-direction.md](references/autonomous-direction.md) before locking color tokens: generate 3 palette candidates (restrained, unusual, tension-based) for the chosen direction, then select one. Follow the Color Direction rule below — anchor on saturated primaries and vary the palette family across demos; do not default to warm/sepia/amber unless the chosen film genuinely calls for it.
 - Lock each page's signature composition before deriving shared layout primitives.
 - Shared systems come last. Extract navigation, footer, spacing rhythm, typography, tokens, and utilities only after the page-specific compositions are already clear.
 - If sub-agents are available, delegate disjoint page-spec extraction or implementation tasks, then merge them back under one lead agent review.
@@ -224,6 +228,7 @@ Keep `SKILL.md` lean. Load only the references needed for the current phase.
 - Build from the spec without improvising new layout logic.
 - Add reduced-motion handling and responsive behavior without breaking the chosen film language.
 - Verify the output against the storyboard and compiled spec.
+- Run the self-critique and batch refinement loop from [references/autonomous-direction.md](references/autonomous-direction.md): score the build harshly (strong / mixed / weak), name the highest-impact upgrades, then apply them in grouped passes (art direction, layout, typography, color, motion, mobile, polish). Do not stop at cosmetic cleanup; refine until the site feels authored. If it still looks AI-generated, say so and fix it.
 - Use the Screening Room and Post-Screening Adjustments rules from [references/implementation-guardrails.md](references/implementation-guardrails.md) when refining the result after the first build.
 
 ## Hard Rules
@@ -248,6 +253,32 @@ Keep `SKILL.md` lean. Load only the references needed for the current phase.
 - Prefer exact tokens and implementation notes over vague adjectives.
 - If web research or a referenced site is unavailable, state that constraint and continue with best-effort inference instead of stalling.
 - Never treat the film itself as a spec sheet, component inventory, or computer workflow. Research the film as cinema, then formalize only the web translation.
+
+### Color Direction
+
+This is a bias on defaults and selection, not an override of the film. A deliberately chosen warm film (for example *In the Mood for Love*, *Dune*, *The Godfather*) keeps its true palette — preserving the chosen film language always wins.
+
+- Work in the saturated, primary-leaning color space — blue, red, green and their confident relatives (cobalt, electric blue, scarlet, oxblood, emerald, viridian, chartreuse) — instead of warm earth tones. **This is a space to rotate through, not a fixed trio.** Each project leads with one direction (red-led, green-led, cobalt-led, or a deliberate tension pair) and that lead rotates from project to project. Do not paint blue+red+green together every time — that is just a new way to converge. These are anchors, not floods: most of the interface still rides on neutrals and surfaces, with color concentrated on actions, emphasis, and rare cinematic moments.
+- Do not default to brown, sepia, amber, tan, or parchment warmth. The color-grade library leans warm (most presets carry a `sepia()` wash) and the legacy token default was a tan gold — reach past that bias first. Pick a warm/earthy grade only when the chosen film genuinely demands it, and say why.
+- "Random" means vary the palette family aggressively across projects so the work never converges on one look — warm *or* primary. Derive the palette lead from the project seed (see Cross-Invocation Variation in [references/anti-convergence.md](references/anti-convergence.md)), not from agent habit. Never literal randomness, never neon chaos. Every palette must hold readable contrast (target WCAG AA for text and UI) and feel intentional.
+- When project history exists, the new palette family must differ from the user's most recent comparable output, the same way composition must (see Demo Uniqueness Protocol).
+- Detailed selection logic, palette exploration, and the surprise rule live in [references/autonomous-direction.md](references/autonomous-direction.md).
+
+### Autonomous Operating Mode
+
+- Behave like a senior creative director who also ships code: infer, propose, choose, and justify rather than waiting for the user to specify every detail. Decide what you can; ask only when a missing answer would genuinely change the design (cap at the most important blocking questions).
+- Introduce at least one controlled, tasteful surprise per project — a single art-direction move the user likely would not have requested but will appreciate — while keeping it usable, accessible, and coherent with the chosen film. Full rules in [references/autonomous-direction.md](references/autonomous-direction.md).
+
+### Universal, Brand-Agnostic
+
+- This is a universal cinematic generator, not the house style of any one brand. Never assume, default to, or steer toward a specific company's palette, logo, or identity.
+- If the user supplies their own brand (tokens, logo, existing site), translate *their* identity through the chosen film. If they do not, generate a fresh identity per the Color Direction and variation rules — do not reach for a built-in brand palette.
+- `references/data/brand-palettes.md` is an optional bring-your-own-brand integration guide with one worked example; treat it as a pattern for plugging in any brand, never as the default look.
+
+### Cross-Invocation Variation
+
+- Every invocation should produce a visibly different style, even with no shared project history. Style is derived from the director + film, so wide, non-repeating director+film selection is the main lever — it propagates to palette, type, composition, and motion downstream.
+- Drive selection from the project seed and span the full library; do not keep landing on the same famous directors or the same palette lead. Follow the Cross-Invocation Variation rules in [references/anti-convergence.md](references/anti-convergence.md).
 
 ## Anti-Patterns
 

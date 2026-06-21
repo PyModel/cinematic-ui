@@ -35,14 +35,18 @@ Never skip phases. Never jump from user request to HTML without the artifacts.
 
 ## Start Questionnaire (run every invocation)
 
-Ask:
-1. How to start: Screenshot / Step-by-step / Surprise me
-2. Image placeholders: Yes / No
-3. Site niche and page list
+Ask (present all at once with defaults; proceed autonomously when input is thin):
+1. How to start: **Surprise me (default)** / Step-by-step / Screenshot
+2. Image placeholders: Yes (default) / No
+3. Site niche and page list (default: infer, then confirm)
 
 ## Key Rules
 
 - Director + film must drive color, type, spacing, composition, and motion
+- Operate autonomously — infer, choose, justify; `Surprise me` is the default. See `references/autonomous-direction.md`
+- Universal and brand-agnostic — never assume or default to a specific brand; honor the user's own brand if given, else generate fresh
+- Make every invocation a visibly different style — seed director+film from the project across the full library, rotate the palette lead (`references/anti-convergence.md`, Cross-Invocation Variation)
+- Work in the saturated, primary-leaning color space but rotate the lead per project (red / green / cobalt / tension pair) — never a fixed blue+red+green trio, never brown/sepia/amber unless the film demands it. One tasteful surprise; self-critique and refine before presenting
 - Every page needs one signature composition that cannot collapse into a generic default grid
 - `fadeUp` / `opacity + translateY` max 2 times per page
 - At least 4 distinct entrance types per page
@@ -64,6 +68,7 @@ Read `references/library-index.md` first to decide which files to load.
 
 Primary files:
 - `SKILL.md` — full skill logic and phase rules
+- `references/autonomous-direction.md` — autonomous posture, color direction, surprise + self-critique
 - `references/premium-calibration.md` — self-check after director brief
 - `references/anti-garbage.md` — final filter before coding
 - `references/anti-convergence.md` — prevent repeated shells

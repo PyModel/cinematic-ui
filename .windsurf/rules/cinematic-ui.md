@@ -29,14 +29,18 @@ Never jump from request to HTML without the artifacts.
 
 ## Start Questionnaire
 
-Ask at every invocation:
-1. How to start: Screenshot / Step-by-step / Surprise me
-2. Image placeholders: Yes / No
-3. Site niche and page list
+Ask at every invocation (present all at once with defaults; proceed autonomously when input is thin):
+1. How to start: **Surprise me (default)** / Step-by-step / Screenshot
+2. Image placeholders: Yes (default) / No
+3. Site niche and page list (default: infer, then confirm)
 
 ## Key Rules
 
 - Director + film drives color, type, spacing, composition, motion
+- Operate autonomously — infer, choose, justify; `Surprise me` is the default. See `references/autonomous-direction.md`
+- Universal and brand-agnostic — never assume or default to a specific brand; honor the user's own brand if given, else generate fresh
+- Make every invocation a visibly different style — seed director+film from the project across the full library, rotate the palette lead (`references/anti-convergence.md`, Cross-Invocation Variation)
+- Work in the saturated, primary-leaning color space but rotate the lead per project (red / green / cobalt / tension pair) — never a fixed blue+red+green trio, never brown/sepia/amber unless the film demands it. One tasteful surprise; self-critique and refine before presenting
 - Every page needs one signature composition — no collapse to default grid
 - `fadeUp` max 2× per page; at least 4 distinct entrance types per page
 - Max 1 heavy interaction per page

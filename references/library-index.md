@@ -50,9 +50,9 @@ Use this file to decide what to read next. Load the smallest useful subset.
 - `data/color-grades.md`
   - Use to translate film palette into UI tokens.
 - `data/brand-palettes.md`
-  - Use when shipping a Pythoughts-flavored property — pre-validated dark and
-    light themes from one source of truth. Skip if the user wants a
-    film-derived grade.
+  - Bring-your-own-brand integration: use only when the user supplies their own
+    brand tokens to honor (one worked example included). Skip for a film-derived
+    grade, and never use it as a default — the skill is brand-agnostic.
 - `data/font-moods.md`
   - Use to pair fonts by tone.
 - `data/textures.md`
