@@ -1,0 +1,42 @@
+{
+  "name": "cinematic-ui",
+  "version": "1.0.0",
+  "description": "A reasoning-first web design skill that makes AI think like a film director — researching a real director and film, extracting cinematic grammar, and translating it into page narrative, composition, and motion. Not a style picker. A director's workflow.",
+  "author": {
+    "name": "Mohamed Elkholy",
+    "url": "https://github.com/Pythoughts-labs"
+  },
+  "repository": "https://github.com/Pythoughts-labs/cinematic-ui",
+  "homepage": "https://github.com/Pythoughts-labs/cinematic-ui",
+  "license": "MIT",
+  "keywords": [
+    "cinematic",
+    "web-design",
+    "ai-skill",
+    "film-director",
+    "design-system",
+    "layout",
+    "storyboard",
+    "ui",
+    "ux",
+    "reasoning",
+    "claude",
+    "cursor",
+    "codex",
+    "gemini",
+    "windsurf",
+    "Pythoughts"
+  ],
+  "skills": [
+    "cinematic-ui"
+  ],
+  "entryPoints": {
+    "claude": "CLAUDE.md",
+    "codex": "CODEX.md",
+    "gemini": "GEMINI.md",
+    "cursor": ".cursor/rules/cinematic-ui.mdc",
+    "windsurf": ".windsurf/rules/cinematic-ui.md",
+    "copilot": ".github/copilot-instructions.md",
+    "agents": "AGENTS.md"
+  }
+}

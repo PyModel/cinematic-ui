@@ -1,0 +1,72 @@
+{
+  "name": "@pythoughts/cinematic-ui",
+  "version": "1.0.0",
+  "description": "A reasoning-first web design skill that makes AI agents think like a film director — research a real director and film, extract cinematic grammar, translate it into page narrative, composition, and motion. Not a style picker. A director's workflow.",
+  "license": "MIT",
+  "author": {
+    "name": "Mohamed Elkholy",
+    "email": "pythoughts@users.noreply.github.com",
+    "url": "https://github.com/Pythoughts-labs"
+  },
+  "maintainers": [
+    {
+      "name": "Mohamed Elkholy",
+      "email": "pythoughts@users.noreply.github.com",
+      "url": "https://github.com/Pythoughts-labs"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pythoughts-labs/cinematic-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Pythoughts-labs/cinematic-ui/issues"
+  },
+  "homepage": "https://github.com/Pythoughts-labs/cinematic-ui#readme",
+  "keywords": [
+    "cinematic",
+    "web-design",
+    "ai-skill",
+    "film-director",
+    "design-system",
+    "layout",
+    "storyboard",
+    "ui",
+    "ux",
+    "reasoning",
+    "claude",
+    "cursor",
+    "codex",
+    "gemini",
+    "windsurf",
+    "copilot",
+    "agent-skill",
+    "Pythoughts"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "SKILL.md",
+    "skill.json",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "CODEX.md",
+    "GEMINI.md",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
+    "SECURITY.md",
+    "references/",
+    "agents/",
+    ".cursor/",
+    ".windsurf/",
+    ".github/"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
