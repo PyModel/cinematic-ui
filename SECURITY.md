@@ -14,7 +14,7 @@ The primary security considerations are:
 If you discover a security issue related to the prompt logic, data files, or workflow design:
 
 1. **Do not open a public issue.**
-2. Contact the maintainer directly by opening a private security advisory at <https://github.com/Pythoughts-labs/cinematic-ui/security/advisories/new>.
+2. Contact the maintainer directly by opening a private security advisory at <https://github.com/PyModel/cinematic-ui/security/advisories/new>.
 3. Include a description of the issue and steps to reproduce.
 
 You should expect a response within 7 days.

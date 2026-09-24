@@ -5,24 +5,24 @@
   "license": "MIT",
   "author": {
     "name": "Mohamed Elkholy",
-    "email": "pythoughts@users.noreply.github.com",
-    "url": "https://github.com/Pythoughts-labs"
+    "email": "hello@pymodel.com",
+    "url": "https://github.com/PyModel"
   },
   "maintainers": [
     {
       "name": "Mohamed Elkholy",
-      "email": "pythoughts@users.noreply.github.com",
-      "url": "https://github.com/Pythoughts-labs"
+      "email": "hello@pymodel.com",
+      "url": "https://github.com/PyModel"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Pythoughts-labs/cinematic-ui.git"
+    "url": "git+https://github.com/PyModel/cinematic-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/Pythoughts-labs/cinematic-ui/issues"
+    "url": "https://github.com/PyModel/cinematic-ui/issues"
   },
-  "homepage": "https://github.com/Pythoughts-labs/cinematic-ui#readme",
+  "homepage": "https://github.com/PyModel/cinematic-ui#readme",
   "keywords": [
     "cinematic",
     "web-design",
@@ -41,7 +41,7 @@
     "windsurf",
     "copilot",
     "agent-skill",
-    "Pythoughts"
+    "PyModel"
   ],
   "engines": {
     "node": ">=18"

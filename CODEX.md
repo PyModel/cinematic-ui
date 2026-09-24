@@ -30,7 +30,7 @@ $CODEX_HOME/skills/cinematic-ui
 Or clone directly from the repository:
 
 ```bash
-git clone https://github.com/Pythoughts-labs/cinematic-ui
+git clone https://github.com/PyModel/cinematic-ui
 ```
 
 Or install as an npm package:

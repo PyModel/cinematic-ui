@@ -23,12 +23,12 @@ Its purpose is to help AI agents create websites with:
 
 **Windows:**
 ```powershell
-git clone https://github.com/Pythoughts-labs/cinematic-ui "$env:USERPROFILE\.claude\skills\cinematic-ui"
+git clone https://github.com/PyModel/cinematic-ui "$env:USERPROFILE\.claude\skills\cinematic-ui"
 ```
 
 **macOS / Linux:**
 ```bash
-git clone https://github.com/Pythoughts-labs/cinematic-ui ~/.claude/skills/cinematic-ui
+git clone https://github.com/PyModel/cinematic-ui ~/.claude/skills/cinematic-ui
 ```
 
 Or install as an npm package:

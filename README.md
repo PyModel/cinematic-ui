@@ -29,8 +29,8 @@ Not a style picker. A director's workflow.
 
 - **Skill name:** `cinematic-ui`
 - **npm package:** [`@pythoughts/cinematic-ui`](https://www.npmjs.com/package/@pythoughts/cinematic-ui)
-- **Repository:** [github.com/Pythoughts-labs/cinematic-ui](https://github.com/Pythoughts-labs/cinematic-ui)
-- **Author & Maintainer:** Mohamed Elkholy (`@Pythoughts`)
+- **Repository:** [github.com/PyModel/cinematic-ui](https://github.com/PyModel/cinematic-ui)
+- **Author & Maintainer:** Mohamed Elkholy (`@elkaix`)
 - **License:** MIT
 
 ---
@@ -103,24 +103,24 @@ Invoke with `/cinematic-ui` inside Claude Code.
 
 **Windows:**
 ```powershell
-git clone https://github.com/Pythoughts-labs/cinematic-ui "$env:USERPROFILE\.claude\skills\cinematic-ui"
+git clone https://github.com/PyModel/cinematic-ui "$env:USERPROFILE\.claude\skills\cinematic-ui"
 ```
 
 **macOS / Linux:**
 ```bash
-git clone https://github.com/Pythoughts-labs/cinematic-ui ~/.claude/skills/cinematic-ui
+git clone https://github.com/PyModel/cinematic-ui ~/.claude/skills/cinematic-ui
 ```
 
 ### Git (Codex / ChatGPT)
 
 ```bash
-git clone https://github.com/Pythoughts-labs/cinematic-ui $CODEX_HOME/skills/cinematic-ui
+git clone https://github.com/PyModel/cinematic-ui $CODEX_HOME/skills/cinematic-ui
 ```
 
 ### Git (Cursor / Windsurf / GitHub Copilot)
 
 ```bash
-git clone https://github.com/Pythoughts-labs/cinematic-ui
+git clone https://github.com/PyModel/cinematic-ui
 ```
 
 Rule files are picked up automatically.
@@ -211,7 +211,7 @@ cinematic-ui/
 ## Publishing
 
 This skill is published as a scoped npm package under the `pythoughts` npm org
-(same maintainer as `@pythoughts/react-frontend-skills`). The owner publishes with:
+(same maintainer as `@pymodel/react-frontend-skills`). The owner publishes with:
 
 ```bash
 npm login

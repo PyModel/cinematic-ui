@@ -8,10 +8,10 @@ description: >
 
 author:
   name: Mohamed Elkholy
-  url: https://github.com/Pythoughts-labs
+  url: https://github.com/PyModel
 
-repository: https://github.com/Pythoughts-labs/cinematic-ui
-homepage: https://github.com/Pythoughts-labs/cinematic-ui
+repository: https://github.com/PyModel/cinematic-ui
+homepage: https://github.com/PyModel/cinematic-ui
 license: MIT
 
 topics:
